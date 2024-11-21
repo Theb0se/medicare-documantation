@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <div class="container">
+        <a class="navbar-brand" href="#">Medicare</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Buy Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Layout -->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-4 col-lg-4 d-md-block sidebar collapse">
+          <div class="accordion accordion-flush" id="sidebarAccordion">
+            <!-- Introduction Section -->
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingIntroduction">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseIntroduction"
+                  aria-expanded="true"
+                  aria-controls="collapseIntroduction"
+                >
+                  <i class="fas fa-folder-open"></i> Introduction
+                </button>
+              </h2>
+              <div
+                id="collapseIntroduction"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingIntroduction"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#intro"
+                        ><i class="fas fa-file-code"></i> Overview</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- custmization -->
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingConfig">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseConfig"
+                  aria-expanded="false"
+                  aria-controls="collapseConfig"
+                >
+                  <i class="fas fa-folder-open"></i> Configuration Summary
+                </button>
+              </h2>
+              <div
+                id="collapseConfig"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingConfig"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#configurations">Overview</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- API Section -->
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingAPI">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseAPI"
+                  aria-expanded="false"
+                  aria-controls="collapseAPI"
+                >
+                  <i class="fas fa-folder-open"></i> API
+                </button>
+              </h2>
+              <div
+                id="collapseAPI"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingAPI"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#endpoints">Endpoints</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#authentication"
+                        >Authentication</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Admin Panel Section -->
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingAdminPanel">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseAdminPanel"
+                  aria-expanded="false"
+                  aria-controls="collapseAdminPanel"
+                >
+                  <i class="fas fa-folder-open"></i> Admin Panel
+                </button>
+              </h2>
+              <div
+                id="collapseAdminPanel"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingAdminPanel"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#settings">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#reports">Reports</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- User App Section -->
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingUserApp">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseUserApp"
+                  aria-expanded="false"
+                  aria-controls="collapseUserApp"
+                >
+                  <i class="fas fa-folder-open"></i> User App
+                </button>
+              </h2>
+              <div
+                id="collapseUserApp"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingUserApp"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#registration">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#features-user">Features</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Doctor App Section -->
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingDoctorApp">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseDoctorApp"
+                  aria-expanded="false"
+                  aria-controls="collapseDoctorApp"
+                >
+                  <i class="fas fa-folder-open"></i> Doctor App
+                </button>
+              </h2>
+              <div
+                id="collapseDoctorApp"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingDoctorApp"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#patient-management"
+                        >Patient Management</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#consultation">Consultation</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Web App Section -->
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingWebApp">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseWebApp"
+                  aria-expanded="false"
+                  aria-controls="collapseWebApp"
+                >
+                  <i class="fas fa-folder-open"></i> Web App
+                </button>
+              </h2>
+              <div
+                id="collapseWebApp"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingWebApp"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#analytics">Analytics</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Content Area -->
+        <main class="col-md-8 ms-sm-auto col-lg-8 px-md-4 pt-0 mt-0">
+          <div class="content-container" id="intro">
+            <h1 class="mt-0"># Introduction</h1>
+            <p>
+              Medicare is a full-stack, multi-functional Clinic Management
+              System (CMS) designed to streamline and enhance healthcare
+              practices. With Medicare, you can efficiently manage patient
+              appointments, doctor's schedules, and clinic operations. It
+              provides tools for clinic staff, doctors, and patients to interact
+              seamlessly, ensuring smooth management of medical records,
+              consultations, and appointment bookings. Medicare allows
+              healthcare facilities to operate both locally and internationally,
+              offering flexibility in managing appointments and patient data
+              across different locations. The system can handle both in-house
+              clinic management and online appointment scheduling, enabling
+              doctors and patients to interact remotely as well. A key feature
+              of Medicare is its ability to adapt to different clinic sizes,
+              whether it's a single doctor clinic or a multi-doctor hospital.
+              You can easily switch between managing individual practices or
+              multi-location networks at any time, providing unmatched
+              flexibility for healthcare professionals.
+            </p>
+
+            <section>
+              <h2>Key Features of Medicare</h2>
+              <ul>
+                <li>
+                  <strong>Appointment Scheduling & Management:</strong> Patients
+                  can easily book appointments online, and doctors can manage
+                  their schedules effectively.
+                </li>
+                <li>
+                  <strong>Patient Records Management:</strong> Securely store
+                  and manage patient medical records, including history,
+                  prescriptions, and consultations.
+                </li>
+                <li>
+                  <strong>Multi-Location & Multi-Doctor Support:</strong>
+                  Seamlessly manage multiple locations and doctors, from
+                  individual practitioners to large healthcare facilities.
+                </li>
+                <li>
+                  <strong>Cross-Platform Compatibility:</strong> Medicare works
+                  seamlessly on both mobile and web platforms, offering
+                  flexibility for both patients and doctors.
+                </li>
+                <li>
+                  <strong>Invoicing & Payments:</strong> Integrated billing
+                  system for generating invoices, managing payments, and
+                  tracking insurance claims.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Technology Stack Used to Build Medicare</h2>
+              <ul>
+                <li>
+                  <strong>Frontend:</strong> React.js for building responsive
+                  and user-friendly interfaces for patients and doctors.
+                </li>
+                <li>
+                  <strong>Backend:</strong> PHP Laravel for handling server-side
+                  logic and API management.
+                </li>
+                <li>
+                  <strong>Database:</strong> MySQL for storing patient data,
+                  appointments, and medical records securely.
+                </li>
+                <li>
+                  <strong>Authentication:</strong> Firebase Authentication for
+                  secure user authentication and role management (doctor,
+                  patient, staff).
+                </li>
+                <li>
+                  <strong>Real-Time Features:</strong> Firebase for real-time
+                  notifications, appointment updates, and chat features between
+                  patients and doctors.
+                </li>
+                <li>
+                  <strong>Admin Dashboard:</strong> Comprehensive dashboard for
+                  clinic administrators to monitor appointments, manage doctors,
+                  and view analytics. build using Reactjs and ChakraUI.
+                </li>
+              </ul>
+            </section>
+
+            <section id="alerts" class="mt-5">
+              <h2>Alerts</h2>
+              <div class="alert alert-success" role="alert">
+                This is a success alert.
+              </div>
+              <div class="alert alert-warning" role="alert">
+                This is a warning alert.
+              </div>
+            </section>
+
+            <section id="code" class="mt-5">
+              <h2>Code Styling</h2>
+              <pre
+                class="bg-dark text-light p-3 rounded"
+              ><code>// This is a sample code block
+function greet() {
+console.log('Hello, world!');
+}
+        </code></pre>
+            </section>
+
+            <section id="headings" class="mt-5">
+              <h2>Headings</h2>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+            </section>
+
+            <!-- vedio section -->
+            <section class="vedio-section">
+              <div class="alert alert-success" role="alert">
+                <h4>TIP</h4>
+                <p>Recommended tutorial is below 👇</p>
+              </div>
+              <div class="bg-light p-3">
+                <iframe
+                  width="100%"
+                  height="400"
+                  src="https://www.youtube.com/embed/WLBEXWhCtH4?si=atSuRmNR8VO9TLZu"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </section>
+
+            <!-- image section -->
+            <section class="image-section">
+              <div class="bg-light p-3">
+              <img src="Images/image.png" alt="imgName">
+              </div>
+            </section>
+          </div>
+
+          <!-- configs -->
+          <div id="configurations" class="content-container">
+            <h1 class="display-4">Overview</h1>
+            <p class="lead">
+              To configure the Medicare application, follow these steps:
+            </p>
+            <ul>
+              <li>
+                <strong>Deploy the Backend API:</strong> First, you need to
+                deploy the Medicare web panel on your server.
+              </li>
+              <li>
+                <strong>Set Up the Base URL:</strong> Use the web host URL as
+                the base URL and configure your app accordingly.
+              </li>
+              <li>
+                <strong>Customization:</strong> The previous section provides a
+                summary of the setup process. For more detailed instructions,
+                refer to the subsequent sections within this documentation.
+              </li>
+            </ul>
+            <p>
+              Medicare also allows you to customize various parts of the
+              application to suit your clinic's specific needs.
+            </p>
+
+            <div class="alert alert-danger mt-4" role="alert">
+              <strong>Warning</strong>
+              <p>
+                Please note that any changes or customizations made to the
+                system are at your own risk. We will not be held responsible for
+                any issues that may arise from these modifications. Always make
+                sure to back up your system before making any changes.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // JavaScript for handling hash-based section visibility
+      window.addEventListener("load", function () {
+        // Get the current hash from the URL
+        let currentHash = window.location.hash;
+
+        // Hide all sections first
+        const allSections = document.querySelectorAll(".content-container");
+        allSections.forEach((section) => (section.style.display = "none"));
+
+        // Show the section that matches the hash in the URL
+        if (currentHash) {
+          const targetSection = document.querySelector(currentHash);
+          if (targetSection) {
+            targetSection.style.display = "block";
+          }
+        } else {
+          // Default to show the first section
+          allSections[0].style.display = "block";
+        }
+      });
+
+      // Update the section when clicking on a link
+      const links = document.querySelectorAll(".nav-link");
+      links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          let targetHash = this.getAttribute("href");
+
+          // Update the URL hash
+          window.location.hash = targetHash;
+
+          // Hide all sections
+          const allSections = document.querySelectorAll(".content-container");
+          allSections.forEach((section) => (section.style.display = "none"));
+
+          // Show the clicked section
+          const targetSection = document.querySelector(targetHash);
+          if (targetSection) {
+            targetSection.style.display = "block";
+          }
+
+          event.preventDefault(); // Prevent default anchor behavior
+        });
+      });
+    </script>
+  </body>
+</html>
