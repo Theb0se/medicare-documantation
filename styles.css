@@ -116,3 +116,28 @@ main p {
   width: 100%;
   height: auto;
 }
+.content-container li {
+  padding-top: 20px;
+}
+.code-main {
+  background: #2e3440ff;
+  border-radius: 5px;
+  margin-top: 20px;
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+.code-main .code {
+  margin-top: 20px;
+  padding-left: 16px;
+}
+
+.code-main code {
+  text-align: left !important;
+  color: #ffffff;
+  font-weight: 500 !important;
+}
+
+.link-active {
+  color: #007bff !important;
+  font-weight: 600;
+}

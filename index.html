@@ -18,9 +18,9 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="body">
     <!-- Top Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">Medicare</a>
         <button
@@ -175,17 +175,40 @@
                 <div class="accordion-body">
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link" href="#settings">Settings</a>
+                      <a class="nav-link" href="#admin-panel-prerequisites"
+                        >Prerequisites</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#reports">Reports</a>
+                      <a class="nav-link" href="#admin-env-setup"
+                        >Enviroment Setup</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#firebas-web-setup"
+                        >Firebase setup</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#admin-panel-mandatory"
+                        >Mandatory Setup
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#admin-custmization"
+                        >Custmization</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#react-build">Build and run</a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <!-- User App Section -->
+            <!-- Mobile App Section -->
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingUserApp">
                 <button
@@ -196,7 +219,7 @@
                   aria-expanded="false"
                   aria-controls="collapseUserApp"
                 >
-                  <i class="fas fa-folder-open"></i> User App
+                  <i class="fas fa-folder-open"></i> Mobile Application
                 </button>
               </h2>
               <div
@@ -208,10 +231,33 @@
                 <div class="accordion-body">
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link" href="#registration">Registration</a>
+                      <a
+                        class="nav-link"
+                        href="#mobile-application-prerequisites"
+                        >Prerequisites</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#features-user">Features</a>
+                      <a
+                        class="nav-link"
+                        href="#mobile-application-environment-setup"
+                        >Environment Setup</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#mobile-application-mandatory-setups"
+                        >Mandatory Setups</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#registration">Customisation</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#registration"
+                        >App Build & Release</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -253,7 +299,7 @@
               </div>
             </div>
 
-            <!-- Web App Section -->
+            <!-- web app -->
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingWebApp">
                 <button
@@ -276,10 +322,33 @@
                 <div class="accordion-body">
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link" href="#dashboard">Dashboard</a>
+                      <a class="nav-link" href="#admin-panel-prerequisites"
+                        >Prerequisites</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#analytics">Analytics</a>
+                      <a class="nav-link" href="#web-env-setup"
+                        >Enviroment Setup</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#firebas-web-setup"
+                        >Firebase setup</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#admin-panel-mandatory"
+                        >Mandatory Setup
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#admin-custmization"
+                        >Custmization</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#react-build">Build and run</a>
                     </li>
                   </ul>
                 </div>
@@ -289,7 +358,11 @@
         </nav>
 
         <!-- Content Area -->
-        <main class="col-md-8 ms-sm-auto col-lg-8 px-md-4 pt-0 mt-0">
+        <main
+          class="col-md-8 ms-sm-auto col-lg-8 px-md-4 pt-0 mt-0"
+          id="content-area"
+        >
+          <!-- intro-->
           <div class="content-container" id="intro">
             <h1 class="mt-0"># Introduction</h1>
             <p>
@@ -428,7 +501,7 @@ console.log('Hello, world!');
             <!-- image section -->
             <section class="image-section">
               <div class="bg-light p-3">
-              <img src="Images/image.png" alt="imgName">
+                <img src="Images/image.png" alt="imgName" />
               </div>
             </section>
           </div>
@@ -469,56 +542,2738 @@ console.log('Hello, world!');
               </p>
             </div>
           </div>
+          <!-- Admin Panel -->
+
+          <!-- Admin-Panel-prerequisites-->
+          <div id="admin-panel-prerequisites" class="content-container">
+            <h1 class="display-4">Prerequisites</h1>
+            <p>
+              Before setting up the project, ensure you meet the following
+              requirements:
+            </p>
+            <ul>
+              <li>
+                <strong>Node.js:</strong> Install Node.js LTS version. Check
+                version:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>node -v</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <strong>npm or Yarn:</strong> Install npm (comes with Node.js)
+                or Yarn:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm -v</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <strong>Git:</strong> Verify Git is installed:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>git --version</code>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <h3>2. Tools</h3>
+            <ul>
+              <li>
+                Code editor:
+                <a
+                  href="https://code.visualstudio.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Visual Studio Code</a
+                >
+              </li>
+              <li>Basic understanding of React.js</li>
+            </ul>
+          </div>
+
+          <!-- admin-env-setup -->
+          <div id="admin-env-setup" class="content-container">
+            <h2>Environment Setup for Admin Panel</h2>
+
+            <h2>Windows</h2>
+            <h3>1. Install Visual Studio Code</h3>
+            <ul>
+              <li>
+                Download Visual Studio Code:
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Download VS Code</a
+                >.
+              </li>
+              <li>
+                Run the downloaded installer and follow the instructions in the
+                installation wizard.
+              </li>
+            </ul>
+
+            <h3>2. Install Node.js</h3>
+            <ul>
+              <li>
+                Visit the official Node.js download page:
+                <a href="https://nodejs.org/" target="_blank"
+                  >Download Node.js</a
+                >.
+              </li>
+              <li>Download the LTS version for Windows.</li>
+              <li>
+                Run the installer and follow the installation steps. Ensure the
+                <strong>npm</strong> package manager is included.
+              </li>
+            </ul>
+
+            <h3>3. Extract the Project File</h3>
+            <ul>
+              <li>
+                You will receive a ZIP file containing the project. Extract it
+                to a folder on your system.
+              </li>
+              <li>
+                The main project folder is named <strong>admin-panel</strong>.
+              </li>
+            </ul>
+
+            <h3>4. Install Project Dependencies</h3>
+            <ul>
+              <li>
+                Open the extracted <strong>admin-panel</strong> folder in Visual
+                Studio Code.
+              </li>
+              <li>
+                Open the integrated terminal in VS Code (<code>Ctrl + `</code>).
+              </li>
+              <li>
+                Run the following command to install the dependencies:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm install</code>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h3>5. Start the Development Server</h3>
+            <ul>
+              <li>
+                In the terminal, run the following command:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm run dev</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                The development server will start, and you can access the admin
+                panel at:
+                <a href="http://localhost:5173" target="_blank"
+                  >http://localhost:5173</a
+                >.
+              </li>
+            </ul>
+
+            <br />
+            <br />
+            <h2>Linux</h2>
+            <h3>1. Install Visual Studio Code</h3>
+            <ul>
+              <li>
+                Download Visual Studio Code:
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Download VS Code</a
+                >.
+              </li>
+              <li>
+                Install it using your package manager or the installer provided
+                for Linux.
+              </li>
+            </ul>
+
+            <h3>2. Install Node.js</h3>
+            <ul>
+              <li>
+                Download Node.js for Linux:
+                <a href="https://nodejs.org/" target="_blank"
+                  >Download Node.js</a
+                >.
+              </li>
+              <li>
+                Use your package manager or install it manually. Ensure
+                <strong>npm</strong> is installed.
+              </li>
+            </ul>
+
+            <h3>3. Extract the Project File</h3>
+            <ul>
+              <li>
+                Extract the ZIP file containing the project to a folder of your
+                choice.
+              </li>
+              <li>
+                Navigate to the extracted <strong>admin-panel</strong> folder in
+                a terminal.
+              </li>
+            </ul>
+
+            <h3>4. Install Project Dependencies</h3>
+            <ul>
+              <li>
+                Run the following command to install the dependencies:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm install</code>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h3>5. Start the Development Server</h3>
+            <ul>
+              <li>
+                Run the following command:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm run dev</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                Access the admin panel at:
+                <a href="http://localhost:5173" target="_blank"
+                  >http://localhost:5173</a
+                >.
+              </li>
+            </ul>
+
+            <br />
+            <br />
+            <h2>Mac</h2>
+            <h3>1. Install Visual Studio Code</h3>
+            <ul>
+              <li>
+                Download Visual Studio Code:
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Download VS Code</a
+                >.
+              </li>
+              <li>Drag and drop VS Code to your Applications folder.</li>
+            </ul>
+
+            <h3>2. Install Node.js</h3>
+            <ul>
+              <li>
+                Visit the Node.js official website:
+                <a href="https://nodejs.org/" target="_blank"
+                  >Download Node.js</a
+                >.
+              </li>
+              <li>
+                Download the LTS version for macOS and follow the installation
+                steps.
+              </li>
+            </ul>
+
+            <h3>3. Extract the Project File</h3>
+            <ul>
+              <li>
+                Unzip the project file and place the extracted
+                <strong>admin-panel</strong> folder in a convenient location.
+              </li>
+            </ul>
+
+            <h3>4. Install Project Dependencies</h3>
+            <ul>
+              <li>
+                Open the <strong>admin-panel</strong> folder in Visual Studio
+                Code.
+              </li>
+              <li>
+                Open the terminal in VS Code (<code>Cmd + `</code>) and run:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm install</code>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h3>5. Start the Development Server</h3>
+            <ul>
+              <li>
+                Run the following command in the terminal:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm run dev</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                Open your browser and visit:
+                <a href="http://localhost:5173" target="_blank"
+                  >http://localhost:5173</a
+                >.
+              </li>
+            </ul>
+          </div>
+
+          <!-- firebase setupfor web -->
+          <div id="firebas-web-setup" class="content-container">
+            <h1>Firebase Console Setup</h1>
+            <p>
+              This guide walks you through the steps to configure a Firebase
+              project for OTP-based authentication and notifications using the
+              Firebase Console.
+            </p>
+            <ol>
+              <h4><li>Create a Firebase Project</li></h4>
+              <ul>
+                <li>
+                  Go to the
+                  <a href="https://console.firebase.google.com" target="_blank"
+                    >Firebase Console</a
+                  >.
+                </li>
+                <li>Click on <strong>Add Project</strong>.</li>
+                <li>
+                  Enter your project name, agree to the terms, and click
+                  <strong>Continue</strong>.
+                </li>
+                <li>
+                  If prompted, choose whether to enable Google Analytics
+                  (optional).
+                </li>
+                <li>Click <strong>Create Project</strong>.</li>
+              </ul>
+              <br />
+              <h4><li>Enable Authentication</li></h4>
+              <ul>
+                <li>
+                  In the Firebase Console, go to the
+                  <strong>Authentication</strong> section.
+                </li>
+                <li>
+                  Click <strong>Get Started</strong> (if you haven’t already).
+                </li>
+                <li>Go to the <strong>Sign-in Method</strong> tab.</li>
+                <li>
+                  Enable the <strong>Phone</strong> provider:
+                  <ul>
+                    <li>
+                      Click the pencil icon next to <strong>Phone</strong>.
+                    </li>
+                    <li>Enable the toggle and click <strong>Save</strong>.</li>
+                  </ul>
+                </li>
+              </ul>
+              <br />
+              <h4><li>Configure Recaptcha for OTP Authentication</li></h4>
+              <ul>
+                <li>
+                  In the <strong>Authentication</strong> section, go to the
+                  <strong>Sign-in Method</strong> tab.
+                </li>
+                <li>
+                  Under <strong>Phone</strong>, scroll to the
+                  <strong>reCAPTCHA Configuration</strong>.
+                </li>
+                <li>
+                  Add the domain(s) where your application will be hosted (e.g.,
+                  <code>localhost</code> for development).
+                </li>
+                <li>Click <strong>Save</strong>.</li>
+              </ul>
+              <br />
+              <h4><li>Enable Cloud Messaging for Notifications</li></h4>
+              <ul>
+                <li>
+                  In the Firebase Console, go to
+                  <strong>Project Settings</strong>.
+                </li>
+                <li>Click on the <strong>Cloud Messaging</strong> tab.</li>
+                <li>
+                  Ensure the <strong>Firebase Cloud Messaging (FCM)</strong> API
+                  is enabled.
+                </li>
+                <li>
+                  Copy the <strong>Server Key</strong> and
+                  <strong>Sender ID</strong> for use in your application.
+                </li>
+              </ul>
+              <br />
+              <h4><li>Add Your App to Firebase</li></h4>
+              <ul>
+                <li>
+                  Go to the <strong>Project Overview</strong> section in the
+                  Firebase Console.
+                </li>
+                <li>
+                  Click the <strong>Add App</strong> button and select
+                  <strong>Web</strong>.
+                </li>
+                <li>
+                  Register your app by providing a name and click
+                  <strong>Register App</strong>.
+                </li>
+                <li>Copy the configuration code for use in your project.</li>
+                <li>Click <strong>Continue to Console</strong>.</li>
+              </ul>
+              <br />
+            </ol>
+          </div>
+
+          <!-- admin Mandatory -->
+          <div id="admin-panel-mandatory" class="content-container">
+            <h1 class="display-4">Prerequisites</h1>
+            <ol>
+              <h4><li>Run an existing React project on IDE</li></h4>
+              <p>
+                To begin, it’s essential to verify that your
+                <strong>React</strong> and
+                <strong>Integrated Development Environment (IDE)</strong> setup
+                has been configured accurately
+              </p>
+              <h4><li>Change the Logo​ and favicon</li></h4>
+              <p>
+                To change App logo and App Icon you need to follow these steps :
+              </p>
+
+              <h5>Logo :</h5>
+              <ul>
+                <li>
+                  Go to <code>&lt;project&gt;/public</code> and replace logo.png
+                  with your own logo.
+                </li>
+              </ul>
+              <br />
+              <h5>Favicon :</h5>
+              <ul>
+                <li>
+                  Go to <code>&lt;project&gt;/public</code> and replace
+                  favicon.png with your own logo.
+                </li>
+              </ul>
+              <br />
+              <div class="alert alert-success" role="alert">
+                <h4>Note</h4>
+                <p>
+                  Please use the exact file name as described; otherwise, it
+                  will not work
+                </p>
+              </div>
+
+              <h4><li>Change The Title</li></h4>
+              <ul>
+                <li>
+                  Go to
+                  <code>&lt;project&gt;/index.html</code>
+                  and change the value of title tag
+                </li>
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>  &lt;title&gt;YOUR_APP_NAME&lt;/title&gt;</code>
+                  </div>
+                </div>
+              </ul>
+              <h4><li>Change Base API URL</li></h4>
+              <ul>
+                <li>
+                  Go to
+                  <code>&lt;project&gt;/.env</code>
+                  and set the value of VITE_API_ADDRESS
+                </li>
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>VITE_API_ADDRESS = ‘YOUR_API_ADDRESS’;</code>
+                  </div>
+                </div>
+              </ul>
+              <h4><li>Change the firebase credentials</li></h4>
+              <p>
+                Before you proceed, ensure you have created a
+                <a href="#firebas-web-setup" class="custom-link-hash"
+                  >Firebase web project</a
+                >
+                and enabled push notifications.
+              </p>
+              <ul>
+                <li>
+                  Go to
+                  <code>&lt;project&gt;/.env</code>
+                  and set the value of firebase credentials
+                </li>
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>
+                      VITE_FIREBASE_API_KEY="YOUR_FIREBASE_API_KEY"
+                      VITE_FIREBASE_AUTH_DOMAIN="YOUR_FIREBASE_AUTH_DOMAIN"
+                      VITE_FIREBASE_PROJECT_ID="YOUR_FIREBASE_PROJECT_ID"
+                      VITE_FIREBASE_STORAGE_BUCKET="YOUR_FIREBASE_STORAGE_BUCKET"
+                      VITE_FIREBASE_MESSAGING_SENDER_ID="YOUR_FIREBASE_MESSAGING_SENDER_ID"
+                      VITE_FIREBASE_APP_ID="YOUR_FIREBASE_APP_ID"
+                      VITE_FIREBASE_MEASUREMENT_ID="YOUR_FIREBASE_MEASUREMENT_ID"
+                      VITE_FIREBASE_FCM_PUBLIC_KEY="YOUR_FIREBASE_FCM_PUBLIC_KEY"
+                    </code>
+                  </div>
+                </div>
+              </ul>
+              <h4><li>Run The Project</li></h4>
+              <p>Now Your React admin panel ready to run</p>
+              <ul>
+                <li>Open the terminal and run command</li>
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code> npm run dev </code>
+                  </div>
+                </div>
+                <li>
+                  The development server will start, and you can access the
+                  admin panel at:
+                  <a href="http://localhost:5173" target="_blank"
+                    >http://localhost:5173</a
+                  >.
+                </li>
+              </ul>
+            </ol>
+          </div>
+
+          <!-- admin custmization -->
+          <div id="admin-custmization" class="content-container">
+            <h1 class="display-4">Customization Setup</h1>
+            <ol>
+              <h4><li>Change App color</li></h4>
+              <p>To change the app color, follow the steps below-</p>
+              <ul>
+                <li>
+                  Go to <code>&lt;project&gt;/theme.js</code> and replace the
+                  main color varients according to your color pallet and play
+                  with thw button varients
+                </li>
+              </ul>
+              <br />
+              <h4><li>Change App Font​</li></h4>
+              <p>
+                To change website font you have to go to
+                <code>&lt;project&gt;/theme.js</code>.then line 28 , inside font
+                object you have 3 options body , heading and mono. Replace the
+                fonts with your preferred fonts.
+                <br />
+                Example :-
+              </p>
+              <div class="code-main">
+                <span
+                  style="
+                    display: block;
+                    padding: 16px 0 0 16px;
+                    margin-bottom: -1px;
+                    width: 100%;
+                    text-align: left;
+                    background-color: #2e3440ff;
+                  "
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="54"
+                    height="14"
+                    viewBox="0 0 54 14"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      transform="translate(1 1)"
+                    >
+                      <circle
+                        cx="6"
+                        cy="6"
+                        r="6"
+                        fill="#FF5F56"
+                        stroke="#E0443E"
+                        stroke-width=".5"
+                      ></circle>
+                      <circle
+                        cx="26"
+                        cy="6"
+                        r="6"
+                        fill="#FFBD2E"
+                        stroke="#DEA123"
+                        stroke-width=".5"
+                      ></circle>
+                      <circle
+                        cx="46"
+                        cy="6"
+                        r="6"
+                        fill="#27C93F"
+                        stroke="#1AAB29"
+                        stroke-width=".5"
+                      ></circle>
+                    </g></svg
+                ></span>
+                <div class="code">
+                  <code>
+                    body: "your font family, sans-serif", <br />
+                    heading: "your font family, sans-serif", <br />
+                    mono: "your font family, monospace",
+                  </code>
+                </div>
+              </div>
+            </ol>
+            <div class="alert alert-success" role="alert">
+              <h4>Note</h4>
+              <p>
+                This app is built using the <strong>Chakra UI</strong> library,
+                which provides a robust set of accessible and customizable
+                components. If you want to explore more customization options
+                and take full advantage of Chakra UI's features, we encourage
+                you to check out the official
+                <a href="https://v2.chakra-ui.com/docs" target="_blank"
+                  >Chakra UI documentation</a
+                >.
+              </p>
+              <p>
+                The documentation offers detailed guides on theming, component
+                customization, and advanced usage, allowing you to tailor the UI
+                to your exact needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- web env -->
+          <div id="web-env-setup" class="content-container">
+            <h2>Environment Setup for Web App</h2>
+            <br /><br />
+            <h2>Windows</h2>
+            <h3>1. Install Visual Studio Code</h3>
+            <ul>
+              <li>
+                Download Visual Studio Code:
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Download VS Code</a
+                >.
+              </li>
+              <li>
+                Run the downloaded installer and follow the instructions in the
+                installation wizard.
+              </li>
+            </ul>
+
+            <h3>2. Install Node.js</h3>
+            <ul>
+              <li>
+                Visit the official Node.js download page:
+                <a href="https://nodejs.org/" target="_blank"
+                  >Download Node.js</a
+                >.
+              </li>
+              <li>Download the LTS version for Windows.</li>
+              <li>
+                Run the installer and follow the installation steps. Ensure the
+                <strong>npm</strong> package manager is included.
+              </li>
+            </ul>
+
+            <h3>3. Extract the Project File</h3>
+            <ul>
+              <li>
+                You will receive a ZIP file containing the project. Extract it
+                to a folder on your system.
+              </li>
+              <li>
+                The main project folder is named <strong>web-app</strong>.
+              </li>
+            </ul>
+
+            <h3>4. Install Project Dependencies</h3>
+            <ul>
+              <li>
+                Open the extracted <strong>web-app</strong> folder in Visual
+                Studio Code.
+              </li>
+              <li>
+                Open the integrated terminal in VS Code (<code>Ctrl + `</code>).
+              </li>
+              <li>
+                Run the following command to install the dependencies:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm install</code>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h3>5. Start the Development Server</h3>
+            <ul>
+              <li>
+                In the terminal, run the following command:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm run dev</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                The development server will start, and you can access the admin
+                panel at:
+                <a href="http://localhost:5173" target="_blank"
+                  >http://localhost:5173</a
+                >.
+              </li>
+            </ul>
+
+            <br />
+            <br />
+            <h2>Linux</h2>
+            <h3>1. Install Visual Studio Code</h3>
+            <ul>
+              <li>
+                Download Visual Studio Code:
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Download VS Code</a
+                >.
+              </li>
+              <li>
+                Install it using your package manager or the installer provided
+                for Linux.
+              </li>
+            </ul>
+
+            <h3>2. Install Node.js</h3>
+            <ul>
+              <li>
+                Download Node.js for Linux:
+                <a href="https://nodejs.org/" target="_blank"
+                  >Download Node.js</a
+                >.
+              </li>
+              <li>
+                Use your package manager or install it manually. Ensure
+                <strong>npm</strong> is installed.
+              </li>
+            </ul>
+
+            <h3>3. Extract the Project File</h3>
+            <ul>
+              <li>
+                Extract the ZIP file containing the project to a folder of your
+                choice.
+              </li>
+              <li>
+                Navigate to the extracted <strong>web-app</strong> folder in a
+                terminal.
+              </li>
+            </ul>
+
+            <h3>4. Install Project Dependencies</h3>
+            <ul>
+              <li>
+                Run the following command to install the dependencies:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm install</code>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h3>5. Start the Development Server</h3>
+            <ul>
+              <li>
+                Run the following command:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm run dev</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                Access the admin panel at:
+                <a href="http://localhost:5173" target="_blank"
+                  >http://localhost:5173</a
+                >.
+              </li>
+            </ul>
+
+            <br />
+            <br />
+            <h2>Mac</h2>
+            <h3>1. Install Visual Studio Code</h3>
+            <ul>
+              <li>
+                Download Visual Studio Code:
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Download VS Code</a
+                >.
+              </li>
+              <li>Drag and drop VS Code to your Applications folder.</li>
+            </ul>
+
+            <h3>2. Install Node.js</h3>
+            <ul>
+              <li>
+                Visit the Node.js official website:
+                <a href="https://nodejs.org/" target="_blank"
+                  >Download Node.js</a
+                >.
+              </li>
+              <li>
+                Download the LTS version for macOS and follow the installation
+                steps.
+              </li>
+            </ul>
+
+            <h3>3. Extract the Project File</h3>
+            <ul>
+              <li>
+                Unzip the project file and place the extracted
+                <strong>web-app</strong> folder in a convenient location.
+              </li>
+            </ul>
+
+            <h3>4. Install Project Dependencies</h3>
+            <ul>
+              <li>
+                Open the <strong>web-app</strong> folder in Visual Studio Code.
+              </li>
+              <li>
+                Open the terminal in VS Code (<code>Cmd + `</code>) and run:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm install</code>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h3>5. Start the Development Server</h3>
+            <ul>
+              <li>
+                Run the following command in the terminal:
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code>npm run dev</code>
+                  </div>
+                </div>
+              </li>
+              <li>
+                Open your browser and visit:
+                <a href="http://localhost:5173" target="_blank"
+                  >http://localhost:5173</a
+                >.
+              </li>
+            </ul>
+          </div>
+
+          <!-- react app build and deploy -->
+          <div id="react-build" class="content-container">
+            <h4 class="display-4">
+              Build for Production & Deploy on Server (apache)
+            </h4>
+
+            <br />
+            <h2>1. Build the React Vite App for Production</h2>
+            <p>
+              Follow these steps to create a production build of your React Vite
+              app:
+            </p>
+            <ol>
+              <li>Open your project directory in a terminal.</li>
+              <li>Run the following command to create a production build:</li>
+            </ol>
+            <div class="code-main">
+              <span
+                style="
+                  display: block;
+                  padding: 16px 0 0 16px;
+                  margin-bottom: -1px;
+                  width: 100%;
+                  text-align: left;
+                  background-color: #2e3440ff;
+                "
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="54"
+                  height="14"
+                  viewBox="0 0 54 14"
+                >
+                  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                    <circle
+                      cx="6"
+                      cy="6"
+                      r="6"
+                      fill="#FF5F56"
+                      stroke="#E0443E"
+                      stroke-width=".5"
+                    ></circle>
+                    <circle
+                      cx="26"
+                      cy="6"
+                      r="6"
+                      fill="#FFBD2E"
+                      stroke="#DEA123"
+                      stroke-width=".5"
+                    ></circle>
+                    <circle
+                      cx="46"
+                      cy="6"
+                      r="6"
+                      fill="#27C93F"
+                      stroke="#1AAB29"
+                      stroke-width=".5"
+                    ></circle>
+                  </g></svg
+              ></span>
+              <div class="code">
+                <code>npm run build</code>
+              </div>
+            </div>
+            <br />
+            <h2>2. Configure the Vite Build for Apache</h2>
+            <p>
+              To ensure proper routing on an Apache server, include a
+              <code>.htaccess</code> file in your <code>public</code> directory
+              before building the app.
+            </p>
+
+            <h3>Sample <code>.htaccess</code> File:</h3>
+            <div class="code-main">
+              <span
+                style="
+                  display: block;
+                  padding: 16px 0 0 16px;
+                  margin-bottom: -1px;
+                  width: 100%;
+                  text-align: left;
+                  background-color: #2e3440ff;
+                "
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="54"
+                  height="14"
+                  viewBox="0 0 54 14"
+                >
+                  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                    <circle
+                      cx="6"
+                      cy="6"
+                      r="6"
+                      fill="#FF5F56"
+                      stroke="#E0443E"
+                      stroke-width=".5"
+                    ></circle>
+                    <circle
+                      cx="26"
+                      cy="6"
+                      r="6"
+                      fill="#FFBD2E"
+                      stroke="#DEA123"
+                      stroke-width=".5"
+                    ></circle>
+                    <circle
+                      cx="46"
+                      cy="6"
+                      r="6"
+                      fill="#27C93F"
+                      stroke="#1AAB29"
+                      stroke-width=".5"
+                    ></circle>
+                  </g></svg
+              ></span>
+              <div class="code">
+                <code>
+                  &lt;IfModule mod_rewrite.c&gt;<br />
+                  &nbsp;&nbsp;RewriteEngine On<br />
+                  &nbsp;&nbsp;RewriteBase /<br /><br />
+                  &nbsp;&nbsp;# Redirect all requests to index.html<br />
+                  &nbsp;&nbsp;RewriteRule ^index\.html$ - [L]<br />
+                  &nbsp;&nbsp;RewriteCond %{REQUEST_FILENAME} !-f<br />
+                  &nbsp;&nbsp;RewriteCond %{REQUEST_FILENAME} !-d<br />
+                  &nbsp;&nbsp;RewriteRule . /index.html [L]<br />
+                  &lt;/IfModule&gt;
+                  </code>
+                  
+
+                
+              </div>
+            </div> 
+            <p>
+              After adding this file, rebuild the app using
+              <code>npm run build</code> if required.
+            </p>
+
+            <br />
+            <h2>3. Upload Files to Apache Server</h2>
+            <ol>
+              <li>
+                <strong>Log in to cPanel or Hosting Account:</strong>
+                <p>Access your hosting provider (e.g., Hostinger or cPanel).</p>
+              </li>
+              <li>
+                <strong>Navigate to the File Manager:</strong>
+                <p>Go to the "File Manager" in your hosting dashboard.</p>
+              </li>
+              <li>
+                <strong>Upload Files:</strong>
+                <p>
+                  Upload the contents of the <code>dist</code> folder (not the
+                  folder itself) into the desired directory, such as
+                  <code>public_html</code>.
+                </p>
+              </li>
+              <li>
+                <strong>Verify File Structure:</strong>
+                <p>Ensure your structure looks similar to:</p>
+                <div class="code-main">
+                  <span
+                    style="
+                      display: block;
+                      padding: 16px 0 0 16px;
+                      margin-bottom: -1px;
+                      width: 100%;
+                      text-align: left;
+                      background-color: #2e3440ff;
+                    "
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54"
+                      height="14"
+                      viewBox="0 0 54 14"
+                    >
+                      <g
+                        fill="none"
+                        fill-rule="evenodd"
+                        transform="translate(1 1)"
+                      >
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="6"
+                          fill="#FF5F56"
+                          stroke="#E0443E"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="26"
+                          cy="6"
+                          r="6"
+                          fill="#FFBD2E"
+                          stroke="#DEA123"
+                          stroke-width=".5"
+                        ></circle>
+                        <circle
+                          cx="46"
+                          cy="6"
+                          r="6"
+                          fill="#27C93F"
+                          stroke="#1AAB29"
+                          stroke-width=".5"
+                        ></circle>
+                      </g></svg
+                  ></span>
+                  <div class="code">
+                    <code
+                      >public_html/ <br />
+                      ├── index.html <br />
+                      ├── assets/ <br />
+                      ├── other build files...
+                    </code>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <br />
+            <div class="note">
+              <strong>
+                <p>
+                  If your app is deployed to a subdirectory (e.g.,
+                  <code>https://yourdomain.com/admin</code>), follow these
+                  steps:
+                </p></strong
+              >
+
+              <h3>React Code</h3>
+              <p>
+                Use the <code>basename</code> prop in the
+                <code>&lt;BrowserRouter&gt;</code> component in
+                <code>main.jsx</code> file:
+              </p>
+
+              <div class="code-main">
+                <span
+                  style="
+                    display: block;
+                    padding: 16px 0 0 16px;
+                    margin-bottom: -1px;
+                    width: 100%;
+                    text-align: left;
+                    background-color: #2e3440ff;
+                  "
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="54"
+                    height="14"
+                    viewBox="0 0 54 14"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      transform="translate(1 1)"
+                    >
+                      <circle
+                        cx="6"
+                        cy="6"
+                        r="6"
+                        fill="#FF5F56"
+                        stroke="#E0443E"
+                        stroke-width=".5"
+                      ></circle>
+                      <circle
+                        cx="26"
+                        cy="6"
+                        r="6"
+                        fill="#FFBD2E"
+                        stroke="#DEA123"
+                        stroke-width=".5"
+                      ></circle>
+                      <circle
+                        cx="46"
+                        cy="6"
+                        r="6"
+                        fill="#27C93F"
+                        stroke="#1AAB29"
+                        stroke-width=".5"
+                      ></circle>
+                    </g></svg
+                ></span>
+                <div class="code">
+                  <code>
+                    &nbsp;&nbsp;&lt;BrowserRouter basename="/admin"&gt;<br />
+                
+                    &nbsp;&nbsp;&lt;/BrowserRouter&gt;<br />
+                  </code>
+                </div>
+              </div>
+              <br />
+              <h3>Vite Configuration</h3>
+              <p>
+                Update the <code>vite.config.js</code> file to set the
+                <code>base</code> option:
+              </p>
+            </div>
+            <div class="code-main">
+              <span
+                style="
+                  display: block;
+                  padding: 16px 0 0 16px;
+                  margin-bottom: -1px;
+                  width: 100%;
+                  text-align: left;
+                  background-color: #2e3440ff;
+                "
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="54"
+                  height="14"
+                  viewBox="0 0 54 14"
+                >
+                  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                    <circle
+                      cx="6"
+                      cy="6"
+                      r="6"
+                      fill="#FF5F56"
+                      stroke="#E0443E"
+                      stroke-width=".5"
+                    ></circle>
+                    <circle
+                      cx="26"
+                      cy="6"
+                      r="6"
+                      fill="#FFBD2E"
+                      stroke="#DEA123"
+                      stroke-width=".5"
+                    ></circle>
+                    <circle
+                      cx="46"
+                      cy="6"
+                      r="6"
+                      fill="#27C93F"
+                      stroke="#1AAB29"
+                      stroke-width=".5"
+                    ></circle>
+                  </g></svg
+              ></span>
+              <div class="code">
+                <code>
+                  import { defineConfig } from "vite";<br />
+                  import react from "@vitejs/plugin-react";<br /><br />
+                  export default defineConfig({<br />
+                  &nbsp;&nbsp;base: "/myapp/",<br />
+                  &nbsp;&nbsp;plugins: [react()],<br />
+                  });
+                </code>
+              </div>
+            </div>
+            <br />
+            <br />
+            <h2>5. Test the Deployment</h2>
+            <ol>
+              <li>
+                Visit your website URL (e.g.,
+                <code>https://yourdomain.com</code>).
+              </li>
+              <li>Verify the app loads correctly, including navigation.</li>
+            </ol>
+
+            <h2>6. Troubleshooting</h2>
+            <ul>
+              <li>
+                <strong>404 Errors on Refresh:</strong>
+                Ensure the <code>.htaccess</code> file is correctly placed in
+                the root directory of your app deployment
+                (<code>public_html/</code>).
+              </li>
+              <li>
+                <strong>File Not Found Errors:</strong>
+                Confirm that all files from the <code>dist</code> folder are
+                uploaded properly, and the <code>assets/</code> folder is
+                intact.
+              </li>
+            </ul>
+
+            <p>
+              This guide should help you successfully deploy your React Vite app
+              on an Apache server. For additional support, consult your hosting
+              provider's support team.
+            </p>
+
+            <div class="alert alert-success" role="alert">
+              <h4>Deployment Note</h4>
+              <p>
+                You can deploy your app anywhere you choose, whether it's on
+                cloud platforms like <strong>AWS</strong>,
+                <strong>VPS</strong> providers, or traditional
+                <strong>Linux servers</strong>. The flexibility of modern web
+                technologies ensures that your app is portable and can be hosted
+                in various environments without issues.
+              </p>
+              <p>
+                For detailed instructions on how to build and deploy your app
+                for production, we highly recommend reading the official
+                <a
+                  href="https://vitejs.dev/guide/static-deploy.html"
+                  target="_blank"
+                  >Vite documentation</a
+                >. It provides comprehensive guidelines on configuring your app,
+                optimizing for production, and deploying it to various hosting
+                providers.
+              </p>
+            </div>
+          </div>
+
+          <!-- mobile-application-prerequisites -->
+          <div id="mobile-application-prerequisites" class="content-container">
+            <h1 class="display-4">Prerequisites</h1>
+            <ul>
+              <li>
+                <strong>IDE (Android Studio or Vs code)</strong>
+                <ul>
+                  <li>Windows</li>
+                  <li>Linux</li>
+                  <li>Mac</li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>Flutter SDK setup (version: 3.24.3)</strong>
+                <ul>
+                  <li>Windows</li>
+                  <li>Linux</li>
+                  <li>Mac</li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>JDK with path setup (only for vs code)</strong>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>Xcode ( Version: 16.1 ) for IPA file build</strong>
+              </li>
+            </ul>
+          </div>
+
+          <!--mobile-application-environment-setup-->
+          <div
+            id="mobile-application-environment-setup"
+            class="content-container"
+          >
+            <h1 class="display-4">Environment Setup</h1>
+            <ol>
+              <li>Windows</li>
+              <li>Linux</li>
+              <li>Mac</li>
+            </ol>
+            <ol>
+              <h4><li>Windows</li></h4>
+              <br />
+              <h5>Install Android Studio</h5>
+              <ul>
+                <li>Download Android Studio</li>
+                <ul>
+                  <li>
+                    Visit the
+                    <a href="https://developer.android.com/studio/archive"
+                      >official Android Studio download page and download</a
+                    ><strong> (Android Studio Koala | 2024.1.2</strong> comes
+                    with JDK 17 pre-installed.) for Windows.
+                  </li>
+                  <li>
+                    Ensure that you are using <strong>JDK 17</strong> for your
+                    Android projects for optimal compatibility and performance.
+                  </li>
+                </ul>
+                <li>Run the Installer</li>
+                <ul>
+                  <li>
+                    Run the downloaded installer executable
+                    <strong>(e.g., android-studio-ide--windows.exe).</strong>
+                  </li>
+                </ul>
+                <li>Follow Installation Wizard</li>
+                <ul>
+                  <li>Follow the instructions in the installation wizard.</li>
+                  <li>Choose a custom installation location if needed.</li>
+                  <li>
+                    Select the components you want to install (Android Studio,
+                    Android Virtual Device, etc.).
+                  </li>
+                </ul>
+                <li>Start Android Studio</li>
+                <ul>
+                  <li>
+                    Once the installation is complete, launch Android Studio.
+                  </li>
+                </ul>
+                <li>Install SDK Components</li>
+                <ul>
+                  <li>
+                    Android Studio will prompt you to install additional SDK
+                    components and tools. Allow it to download and install them.
+                  </li>
+                </ul>
+                <li>Set up Emulator (Optional)</li>
+                <ul>
+                  <li>
+                    If you plan to use an emulator, you can create one through
+                    the AVD (Android Virtual Device) Manager in Android Studio.
+                  </li>
+                </ul>
+              </ul>
+              <br />
+
+              <h5>Install Flutter SDK</h5>
+              <ul>
+                <li>Download Flutter SDK.</li>
+                <li>
+                  Visit the
+                  <a href="https://docs.flutter.dev/get-started/install/windows"
+                    >official Flutter download page for</a
+                  >
+                  for Windows.
+                </li>
+                <li>Extract Flutter Archive.</li>
+                <li>
+                  Extract the downloaded Flutter zip file to a location on your
+                  machine. For example, <strong>‘C:\flutter’</strong>.
+                </li>
+
+                <li>Add Flutter to System Path</li>
+                <ul>
+                  <li>
+                    Add the <code>flutter\bin</code> directory to your system’s
+                    PATH variable.
+                  </li>
+                  <ul>
+                    <li>
+                      Right-click on “This PC” or “Computer” on your desktop or
+                      in File Explorer.
+                    </li>
+                    <li>
+                      Select “Properties” -> “Advanced system settings” ->
+                      “Environment Variables.”
+                    </li>
+                    <li>
+                      In the “System variables” section, find and select the
+                      “Path” variable, then click “Edit.”
+                    </li>
+                    <li>
+                      Click “New” and add the path to the
+                      <code>bin</code> directory inside the Flutter directory.
+                    </li>
+                  </ul>
+                </ul>
+                <li>Verify Flutter Installation</li>
+                <ul>
+                  <li>
+                    Open a new Command Prompt and run ‘flutter doctor’ to check
+                    for any dependencies that need to be installed or
+                    configured.
+                  </li>
+                </ul>
+                <li>Install Flutter Plugins for Android Studio</li>
+                <ul>
+                  <li>Open Android Studio.</li>
+                  <li>
+                    Install the Flutter and Dart plugins through
+                    <code>File</code> -> <code>Settings</code> ->
+                    <code>Plugins</code> -> <code>Marketplace</code>.
+                  </li>
+                  <li>Restart Android Studio to apply the changes.</li>
+                </ul>
+              </ul>
+              <br />
+              <section class="vedio-section">
+                <div class="alert alert-success" role="alert">
+                  <h4>TIP</h4>
+                  <p>Recommended tutorial is below 👇</p>
+                </div>
+                <div class="bg-light p-3">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/hfz_AraTk_k?si=X3Mew3y1cWcOztrd"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </section>
+              <h4><li>Linux</li></h4>
+              <br />
+              <h5>Install Android Studio</h5>
+              <ul>
+                <li><strong>Download Android Studio:</strong></li>
+                <ul>
+                  <li>
+                    Visit the
+                    <a href="https://developer.android.com/studio/archive"
+                      >official Android Studio download page and download
+                    </a>
+                    <strong>Android Studio Koala | 2024.1.2</strong> (comes with
+                    JDK 17 pre-installed) for Windows.
+                  </li>
+                  <li>
+                    Ensure that you are using JDK 17 for your Android projects
+                    for optimal compatibility and performance.
+                  </li>
+                </ul>
+                <li><strong>Extract the Archive:</strong></li>
+                <ul>
+                  <li>
+                    Open a terminal and navigate to the directory where the
+                    archive was downloaded.
+                  </li>
+                  <li>
+                    Extract the archive using the following command:
+                    <code
+                      >tar -xvzf
+                      android-studio-ide-&lt;version&gt;-linux.tar.gz</code
+                    >
+                    (replace
+                    <code>android-studio-ide-&lt;version&gt;-linux.tar.gz</code>
+                    with the actual filename).
+                  </li>
+                </ul>
+                <li><strong>Move to Installation Location:</strong></li>
+                <ul>
+                  <li>
+                    Move the extracted folder to a location of your choice. For
+                    example:
+                    <code>sudo mv android-studio /YOUR_DIRECTORY</code>.
+                  </li>
+                </ul>
+                <li><strong>Run Android Studio Setup:</strong></li>
+                <ul>
+                  <li>
+                    Navigate to the bin directory inside the Android Studio
+                    folder:
+                    <code>cd /YOUR_DIRECTORY/android-studio/bin</code>.
+                  </li>
+                  <li>
+                    Run <code>./studio.sh</code> to start the Android Studio
+                    setup.
+                  </li>
+                </ul>
+                <li><strong>Follow Installation Wizard:</strong></li>
+                <ul>
+                  <li>
+                    Follow the instructions in the setup wizard to complete the
+                    installation.
+                  </li>
+                  <li>Choose a custom installation location if needed.</li>
+                </ul>
+              </ul>
+              <br />
+              <h5>Install Flutter SDK:</h5>
+              <ul>
+                <li><strong>Download Flutter SDK:</strong></li>
+                <ul>
+                  <li>
+                    Visit the
+                    <a href="https://docs.flutter.dev/get-started/install/linux"
+                      >official Flutter download page and download</a
+                    >
+                    the latest stable version for Linux.
+                  </li>
+                </ul>
+                <li><strong>Extract Flutter Archive:</strong></li>
+                <ul>
+                  <li>
+                    Open a terminal and navigate to the directory where the
+                    archive was downloaded.
+                  </li>
+                  <li>
+                    Extract the archive using the following command:
+                    <code>tar xf flutter_linux_&lt;version&gt;.tar.xz</code>
+                    (replace
+                    <code>flutter_linux_&lt;version&gt;.tar.xz</code> with the
+                    actual filename).
+                  </li>
+                </ul>
+                <li><strong>Move to Installation Location:</strong></li>
+                <ul>
+                  <li>
+                    Move the extracted folder to a location of your choice. For
+                    example:
+                    <code>sudo mv flutter /YOUR_DIRECTORY</code>.
+                  </li>
+                </ul>
+                <li><strong>Add Flutter to System Path:</strong></li>
+                <ul>
+                  <li>
+                    Add the <code>flutter/bin</code> directory to your system’s
+                    PATH variable.
+                  </li>
+                </ul>
+                <li><strong>Verify Flutter Installation:</strong></li>
+                <ul>
+                  <li>
+                    Open a new terminal and run: <code>flutter doctor</code>.
+                  </li>
+                </ul>
+                <li>
+                  <strong>Install Flutter Plugins for Android Studio:</strong>
+                </li>
+                <ul>
+                  <li>Open Android Studio.</li>
+                  <li>
+                    Install the Flutter and Dart plugins through
+                    <code>File</code> -> <code>Settings</code> ->
+                    <code>Plugins</code> -> <code>Marketplace</code>.
+                  </li>
+                  <li>Restart Android Studio to apply the changes.</li>
+                </ul>
+              </ul>
+              <br />
+              <section class="vedio-section">
+                <div class="alert alert-success" role="alert">
+                  <h4>TIP</h4>
+                  <p>Recommended tutorial is below 👇</p>
+                </div>
+                <div class="bg-light p-3">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/e63OlW_2gpQ?si=7NeRDly6ul-J4cJE"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </section>
+              <h4><li>Mac</li></h4>
+              <h5>Install Android Studio</h5>
+              <ul>
+                <li><strong>Download Android Studio:</strong></li>
+                <ul>
+                  <li>
+                    Visit the
+                    <a href="https://developer.android.com/studio/archive"
+                      >official Android Studio download page and download</a
+                    >
+                    <strong>Android Studio Koala | 2024.1.2</strong> (comes with
+                    JDK 17 pre-installed) for Windows.
+                  </li>
+                  <li>
+                    Ensure that you are using JDK 17 for your Android projects
+                    for optimal compatibility and performance.
+                  </li>
+                </ul>
+                <li><strong>Open the DMG file:</strong></li>
+                <ul>
+                  <li>Open the downloaded DMG file.</li>
+                  <li>
+                    Drag and drop Android Studio into the “Applications” folder.
+                  </li>
+                </ul>
+                <li><strong>Run Android Studio:</strong></li>
+                <ul>
+                  <li>
+                    Open the “Applications” folder and launch Android Studio.
+                  </li>
+                </ul>
+                <li><strong>Set up Android Studio:</strong></li>
+                <ul>
+                  <li>Complete the Android Studio Setup Wizard.</li>
+                  <li>
+                    Android Studio may prompt you to install additional
+                    components and SDKs. Follow the instructions to install
+                    them.
+                  </li>
+                </ul>
+              </ul>
+              <br />
+              <h5>Install Flutter SDK</h5>
+              <ul>
+                <li><strong>Download Flutter SDK:</strong></li>
+                <ul>
+                  <li>
+                    Visit the
+                    <a href="https://docs.flutter.dev/get-started/install/macos"
+                      >official Flutter download page and download</a
+                    >
+                    the latest stable version for macOS.
+                  </li>
+                </ul>
+                <li><strong>Extract Flutter Archive:</strong></li>
+                <ul>
+                  <li>
+                    Open a terminal and navigate to the directory where the
+                    archive was downloaded.
+                  </li>
+                  <li>
+                    Extract the archive using the following command:
+                    <code>tar xf flutter_macos_&lt;version&gt;.tar.xz</code>
+                    (replace
+                    <code>flutter_macos_&lt;version&gt;.tar.xz</code> with the
+                    actual filename).
+                  </li>
+                </ul>
+                <li><strong>Move to Installation Location:</strong></li>
+                <ul>
+                  <li>
+                    Move the extracted folder to a location of your choice. For
+                    example:
+                    <code>sudo mv flutter /YOUR_DIRECTORY</code>.
+                  </li>
+                </ul>
+                <li><strong>Add Flutter to System Path:</strong></li>
+                <ul>
+                  <li>
+                    Add the <code>flutter/bin</code> directory to your system’s
+                    PATH variable.
+                  </li>
+                </ul>
+                <li><strong>Verify Flutter Installation:</strong></li>
+                <ul>
+                  <li>
+                    Open a new terminal and run: <code>flutter doctor</code>.
+                  </li>
+                </ul>
+                <li>
+                  <strong>Install Flutter Plugins for Android Studio:</strong>
+                </li>
+                <ul>
+                  <li>Open Android Studio.</li>
+                  <li>
+                    Install the Flutter and Dart plugins through
+                    <code>Preferences</code> -> <code>Plugins</code> ->
+                    <code>Marketplace</code>.
+                  </li>
+                </ul>
+                <li><strong>Restart Android Studio:</strong></li>
+                <ul>
+                  <li>Restart Android Studio to apply the changes.</li>
+                </ul>
+              </ul>
+              <br />
+              <section class="vedio-section">
+                <div class="alert alert-success" role="alert">
+                  <h4>TIP</h4>
+                  <p>Recommended tutorial is below 👇</p>
+                </div>
+                <div class="bg-light p-3">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/f09c-nw15K8?si=Ilk2hcAyLLQ_F2t3"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </section>
+            </ol>
+          </div>
+
+          <!--mobile-application-mandatory-setups-->
+          <div
+            id="mobile-application-mandatory-setups"
+            class="content-container"
+          >
+            <h1 class="display-4">Mandatory Setups</h1>
+            <ol>
+              <h4><li>Run an existing flutter project on IDE</li></h4>
+              <p>
+                To begin, it’s essential to verify that your
+                <strong>Flutter</strong> and
+                <strong>Integrated Development Environment (IDE)</strong> setup
+                has been configured accurately
+              </p>
+              <ul>
+                <li>
+                  Execute the command <code>flutter doctor</code> in your
+                  terminal. If any issues arise during this process, make sure
+                  to address and resolve them promptly.
+                </li>
+                <li>
+                  Then open your project. Once the project is open, Android
+                  Studio may prompt you to install the dependencies. If not, you
+                  can run the <code>flutter pub get</code> from the terminal in
+                  the project directory to fetch the dependencies.
+                </li>
+                <li>
+                  After the dependencies are installed, you should be able to
+                  run the app.
+                </li>
+              </ul>
+              <br />
+              <section class="vedio-section">
+                <div class="alert alert-success" role="alert">
+                  <h4>TIP</h4>
+                  <p>Recommended tutorial is below 👇</p>
+                </div>
+                <div class="bg-light p-3">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/EkIz8mmP6iU?si=fQjoPcUk-Linbg4L"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </section>
+              <h4><li>Change App Logo​ and Icon</li></h4>
+              <p>
+                To change App logo and App Icon you need to follow these steps :
+              </p>
+
+              <h5>App Logo :</h5>
+              <ul>
+                <li>
+                  Go to <code>&lt;project&gt;/assets/icons/</code> and replace
+                  logo.png with your own logo.
+                </li>
+              </ul>
+              <br />
+              <div class="alert alert-success" role="alert">
+                <h4>Note</h4>
+                <p>
+                  Please use the exact file name as described; otherwise, it
+                  will not work
+                </p>
+              </div>
+              <br />
+              <h5>App Icon :</h5>
+              <p>
+                You can generate your app icon using this site
+                <a href="https://www.appicon.co/">Visit</a>
+              </p>
+              <ul>
+                <li>
+                  Then go to <code>/android/app/src/main/res</code> and replace
+                  all mipmap folders with your &lt;generated icon&gt;/android
+                  folder.
+                </li>
+                <li>
+                  Again go to <code>/ios/Runner</code> and replace
+                  Assets.xcassets with your generated Assets.xcassets folder.
+                </li>
+              </ul>
+              <h4><li>Change App Name​</li></h4>
+              <p>you need to set your app name in three different places.</p>
+              <ul>
+                <li>
+                  Go to
+                  <code>&lt;project&gt;/lib/utilities/app_constans.dart</code>
+                  and set the value of appName
+                </li>
+                <code>static const String appName = ‘YOUR_APP_NAME’;</code>
+                <li>
+                  Change the value of label from<code
+                    >&lt;project&gt;/android/app/src/main/AndroidManifest.xml</code
+                  >
+                </li>
+                <code>android:label="YOUR_APP_NAME"</code>
+                <li>
+                  Change the value of CFBundleName from
+                  <code
+                    >&lt;project&gt;/iOS/Runner/info.plist/iOS/Runner/info.plist</code
+                  >
+                </li>
+                <code
+                  ><key>CFBundleName</key> <string>YOUR_APP_NAME</string></code
+                >
+              </ul>
+              <h4><li>Change Base URL-----------------------Later</li></h4>
+              <h4><li>Change App Package</li></h4>
+              <ul>
+                First, you have to find out the existing package name. You can
+                find it out from the top of the
+                <code>&lt;project&gt;/android/app/build.gradle</code>
+                file. Now right-click on the project folder from Android Studio
+                and click on replace in files. You will get a popup window with
+                two input boxes. In the first box, you have to put the existing
+                package name that you saw in the build.gradle file previously
+                and write down your preferred package name in the second box and
+                then click on the Replace All button.
+              </ul>
+            </ol>
+          </div>
         </main>
       </div>
     </div>
 
+    <footer
+      style="
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      "
+    >
+      <h2 style="color: #fff">Need Help?</h2>
+      <p style="color: #fff">
+        If you encounter any problems during installation or deployment, please
+        don't hesitate to contact us. We are here to help!
+      </p>
+      <ul style="list-style: none; padding: 0; color: #fff">
+        <li>
+          <strong>Email:</strong>
+          <a
+            href="mailto:support@example.com"
+            style="color: #fff; text-decoration: none"
+            >support@example.com</a
+          >
+        </li>
+        <li><strong>Phone:</strong> +91 9754472611/li></li>
+        <li><strong>Phone:</strong> +91 8889990643/li></li>
+        <li>
+          <strong>Support Portal:</strong>
+          <a
+            href="https://support.techashna.com"
+            target="_blank"
+            style="color: #fff; text-decoration: none"
+            >https://support.techashna.com</a
+          >
+        </li>
+      </ul>
+      <p style="font-size: 0.9rem">
+        &copy; 2024 Techashna. All rights reserved.
+      </p>
+    </footer>
+
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // JavaScript for handling hash-based section visibility
-      window.addEventListener("load", function () {
-        // Get the current hash from the URL
-        let currentHash = window.location.hash;
-
-        // Hide all sections first
-        const allSections = document.querySelectorAll(".content-container");
-        allSections.forEach((section) => (section.style.display = "none"));
-
-        // Show the section that matches the hash in the URL
-        if (currentHash) {
-          const targetSection = document.querySelector(currentHash);
-          if (targetSection) {
-            targetSection.style.display = "block";
-          }
-        } else {
-          // Default to show the first section
-          allSections[0].style.display = "block";
-        }
-      });
-
-      // Update the section when clicking on a link
-      const links = document.querySelectorAll(".nav-link");
-      links.forEach((link) => {
-        link.addEventListener("click", function (event) {
-          let targetHash = this.getAttribute("href");
-
-          // Update the URL hash
-          window.location.hash = targetHash;
-
-          // Hide all sections
-          const allSections = document.querySelectorAll(".content-container");
-          allSections.forEach((section) => (section.style.display = "none"));
-
-          // Show the clicked section
-          const targetSection = document.querySelector(targetHash);
-          if (targetSection) {
-            targetSection.style.display = "block";
-          }
-
-          event.preventDefault(); // Prevent default anchor behavior
-        });
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
